@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+.todo{
+  align-self: center;
+  color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo .crossText {
+  text-decoration: line-through;
+  color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo input{
+  background: transparent;
+  border: black;
+  color: black;
+  border-bottom: 5px ;
+  min-width: 400px;
+  margin-top: 40px;
+  padding: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todo input::placeholder{
+  color: black;
+  font-size: 1rem;
+}
+
+.todo input:focus{
+  outline: black;
+  border: 2px dotted black;
+}
+
+.todo .add-btn{
+  padding: 10px;
+  border-radius: 30%;
+  color: black;
+  font-size: 1.2rem;
+  background-color: green;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 3px solid black;
+}
+
+.todo .add-btn:hover {
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.todo ul {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+.todo ul li {
+  list-style: none;
+  margin-bottom: 4px;
+ 
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-left: -50px;
+  background-color: rgb(236, 236, 236, 0.6);
+  font-family: "Permanent Marker", cursive;
+  color: black;
+}
+.todo ul li .delete {
+  margin-top: 5px;
+  float: right;
+  padding: 4px 10px 4px 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo ul li .completed {
+  margin-top: 5px;
+  float: right;
+  padding: 4px 10px 4px 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: green;
+  margin-left: 10px;
+  display: inline;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.date{
+    color: black;
+    font-size: 20px;
+    display: table;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    appearance: none;
+    transition: 0.4s ease;
+    align-items: center;
+    display: flex;
+}
+
+
+.App{
+  background-image: url('./images/bea.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.App::before{
+  background-color: rgba(8, 8, 8, 0.37);
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
